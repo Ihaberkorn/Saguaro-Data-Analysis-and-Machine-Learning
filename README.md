@@ -1,2 +1,6 @@
-# Saguaro-Data-Analysis-and-Machine-Learning
-Randomly sampling images from the past 10 years of saguaros and marking them down to count and analyze buds and stems then creating a machine learning program which can mark the stems and buds itself
+# Saguaro Data Analysis and Machine Learning
+In this project, I randomly sampled 30 images of saguaros each year from the past 10 years and marked the amount of buds and stems on each. 
+## Data Collection
+## Marking Images
+## Analyzing Data
+## Machine Learning
