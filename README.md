@@ -6,14 +6,18 @@ To get the data needed for this project, information on saguaros in May was down
 To mark the images, the software [LabelImg](https://github.com/HumanSignal/labelImg) was used to draw boxes around each bud and stem (stems in progress as of 06/18/26). This was done in the YOLO format which saves the coordinates of each box in a text file that can then be used to train a machine learning program. Here is an example of what a labeled saguaro looks like in this software:
 
 <p align="center">
-<img width="307" height="432" alt="image" src="https://github.com/user-attachments/assets/8717f07c-f0cf-43af-9cb5-275923f9ab26" />
+  <img width="307" height="432" alt="image" src="https://github.com/user-attachments/assets/8717f07c-f0cf-43af-9cb5-275923f9ab26" /><br>
+  <em>Good example of image labeling. Large boxes are stems, small dots are buds.</em>
 </p>
+<br>
 
 The larger boxes being the stems and the smaller boxes being the buds. As this was done this, the amount of buds and stems were logged in separate excel spreadsheets which were later used to analyze the data: [saguaro-bud-stem-per-year.csv](saguaro-bud-stem-per-year.csv). However, due to the randomness of the images, many of the images were difficult to correctly mark, likely causing inaccuracy in the results. For example: 
 
 <p align="center">
-<img width="1097" height="450" alt="image" src="https://github.com/user-attachments/assets/290ec97d-0bc6-4911-b066-24ce38a4fb32" />
+  <img width="1097" height="450" alt="image" src="https://github.com/user-attachments/assets/290ec97d-0bc6-4911-b066-24ce38a4fb32" /><br>
+  <em>Example of bad picture. Saguaros are blurry and buds can not be seen. Images like this confound data.</em>
 </p>
+<br>
 
 Many images, such as the one above, were blurry and taken far away from the saguaros. This made it so that, even if there were buds on the saguaros, it was impossible to actually see or mark them in the photo, consequently marking more stems than buds. 
 ## Analyzing Bud Data
