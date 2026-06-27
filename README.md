@@ -24,8 +24,10 @@ Many images, such as the one above, were blurry and taken far away from the sagu
 To analyze and graph the data, the buds excel spreadsheet was put into a pandas dataframe. First, the data was graphed, looking at the average buds per year as well as the standard error for each year: 
 
 <p align="center">
-<img width="562" height="455" alt="download" src="https://github.com/user-attachments/assets/c491a459-0935-4a28-92c1-db119a81bd79" />
+  <img width="562" height="455" alt="download" src="https://github.com/user-attachments/assets/c491a459-0935-4a28-92c1-db119a81bd79" /><br>
+  <em>Average buds per image per year with standard error</em>
 </p>
+<br>
 
 The data had fairly high standard errors with fairly different means and a seemingly significant decrease of buds in 2022. Initially, an anova test seemed to be the best option to use on the data but after testing for normality and homogeneity of variances, it was clear an anova test would not be valid and a non parametric test must be used. The best option was the kruskal wallis test which gave me a p-value of 0.0004, showing that there is a significant difference in at least some of the years. After this, a dunns test was done on the data which only showed a significant difference between the years 2022 and 2016 with a p-value of 0.001 and the years 2022 and 2020 with a p-value of 0.002. This illustrates that, overall, there was not a significant difference between the means of buds each year. This can be seen in [saguaro_bud_counts.ipynb](saguaro_bud_counts.ipynb).
 
@@ -34,14 +36,18 @@ The reason that a significant difference was not seen between most of the years 
 To analyze the stem data, the stems excel spreadsheet was also put into a pandas dataframe where the data was graphed by year. 
 
 <p align="center">
-<img width="565" height="455" alt="download" src="https://github.com/user-attachments/assets/87199c98-3dcd-43a2-863f-af84cb834a58" />
+  <img width="565" height="455" alt="download" src="https://github.com/user-attachments/assets/87199c98-3dcd-43a2-863f-af84cb834a58" /><br>
+  <em>Average stems per image per year with standard deviation</em>
 </p>
+<br>
 
 The means of each year seemed very similar with an exception of the year 2025 which had a huge standard deviation. It was determined that this data was not normally distributed but did have homogeneity of variances, so an anova test was done. The anova gave a p-value of 0.1669 meaning that there was not a significant difference between the means of stems in each image each year. This can be seen in [Saguaro_stem_counts.ipynb](Saguaro_stem_counts.ipynb) Since there was not a signicant difference between the amount of stems in each image, an analysis on the amount of buds per stem in each image could be used as a control in looking at the amount of buds per year. To do this, the amount of buds in each image was divided by the amount of stems in each image. When the data was graphed it looked like there were differences in the average buds per stem per image per year.
 
 <p align ="center">
-<img width="562" height="455" alt="download" src="https://github.com/user-attachments/assets/6c3f0c88-2575-4462-97d9-e4028c39a855" />
-</p> 
+  <img width="562" height="455" alt="download" src="https://github.com/user-attachments/assets/6c3f0c88-2575-4462-97d9-e4028c39a855" /><br>
+  <em>Average buds per stem per image per year with standard error</em>
+</p>
+<br>
 
 To determine if there was a statistical difference between the means of buds per stem per year, a kruskal wallis test was done since the data was not normally distributed nor had homogeneity of variences. The kruskal wallis test produced a p-value of 1.208e-05, meaning that there is a significant difference between at least some of the means of the buds per stem per year. To further look into this, a dunns test was done on the data. The dunns test showed a significant difference between the years 2016 and 2022, 2019 and 2022, 2020 and 2022, 2020 and 2024, implicating that these years had differing buds per stem per image per year. This can be seen in [Saguaro_stem_bud_analysis.ipynb](Saguaro_stem_bud_analysis.ipynb). 
 ## Machine Learning
