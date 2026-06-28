@@ -24,7 +24,7 @@ Many images, such as the one above, were blurry and taken far away from the sagu
 Data was analyzed with Pandas, MatPlotLib, and Scipy. First, the data was graphed, looking at the average buds per imageper year as well as the standard error for each year: 
 
 <p align="center">
-  <img width="562" height="455" alt="download" src="https://github.com/user-attachments/assets/c491a459-0935-4a28-92c1-db119a81bd79" /><br>
+  <img width="562" height="455" alt="download" src="https://github.com/user-attachments/assets/5c755b4e-cbbe-4cb0-aad7-aa209c190ac6" /><br>
   <em>Average buds per image per year with standard error</em>
 </p>
 <br>
