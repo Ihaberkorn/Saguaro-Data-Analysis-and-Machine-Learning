@@ -11,7 +11,11 @@ To label the images, the software [LabelImg](https://github.com/HumanSignal/labe
 </p>
 <br>
 
+<<<<<<< HEAD
 The larger boxes being the stems and the smaller boxes being the buds. As this was done this, the number of buds and stems were logged and used for analysis: [saguaro-bud-stem-per-year.csv](saguaro-bud-stem-per-year.csv). However, due to the inconsistency of how the images were taken, many were difficult to correctly label, likely causing inaccuracy in the results. For example: 
+=======
+The larger boxes being the stems and the smaller boxes being the buds. As this was done this, the amount of buds and stems were logged in separate excel spreadsheets which were later used to analyze the data: [saguaro-bud-stem-per-year.csv](saguaro-bud-stem-per-year.csv). However, due to the randomness of the images, many of the images were difficult to correctly mark, likely causing inaccuracy in the results. For example: 
+>>>>>>> 18c7dc9 (change readme)
 
 <p align="center">
   <img width="1097" height="450" alt="image" src="https://github.com/user-attachments/assets/290ec97d-0bc6-4911-b066-24ce38a4fb32" /><br>
@@ -21,7 +25,11 @@ The larger boxes being the stems and the smaller boxes being the buds. As this w
 
 Many images, such as the one above, were blurry and taken far away from the saguaros. This made it so that, even if there were buds on the saguaros, it was impossible to actually see or mark them in the photo, consequently making fewer buds per stem. 
 ## Analyzing Bud Data
+<<<<<<< HEAD
 Data was analyzed with Pandas, MatPlotLib, and Scipy. First, the data was graphed, looking at the average buds per imageper year as well as the standard error for each year: 
+=======
+To analyze and graph the data, the [buds excel spreadsheet]('Saguaro Bud Counts - Sheet1.csv') was put into a pandas dataframe. First, the data was graphed, looking at the average buds per year as well as the standard error for each year: 
+>>>>>>> 18c7dc9 (change readme)
 
 <p align="center">
   <img width="562" height="455" alt="download" src="https://github.com/user-attachments/assets/c491a459-0935-4a28-92c1-db119a81bd79" /><br>
@@ -31,6 +39,7 @@ Data was analyzed with Pandas, MatPlotLib, and Scipy. First, the data was graphe
 
 The data had fairly high standard errors with fairly different means and a seemingly significant decrease of buds in 2022. The data had a non-normal distribution and non-homogeneity of variences. The best option was the Kruskal Wallis test which gave a p-value of 0.0004, showing that there is a significant difference in at least some of the years. After this, a dunns pairwise comparison test was done on the data which only showed a significant difference between the years 2022 and 2016 with a p-value of 0.001 and the years 2022 and 2020 with a p-value of 0.002. This analysis can be seen in [saguaro_bud_counts.ipynb](saguaro_bud_counts.ipynb).
 
+<<<<<<< HEAD
 The reason that a significant difference was not seen between most of the years is likely due to the bias created from the blurry photos mentioned before. The amount of buds each year in these photos could not be correctly counted due to these photos. This is why it is important to also label and count the number of stems each year so that the amount of buds can be controlled to the amount of stems in each image. 
 ## Analyzing Stem Data With Bud Data 
 
@@ -49,5 +58,14 @@ The mean number of stems each year appeared similar with an exception of the yea
 <br>
 
 To determine if there was a statistical difference between the mean buds per stem per year, a Kruskal Wallis test was done since the data was not normally distributed nor had homogeneity of variences. The Kruskal Wallis test produced a p-value of 1.208e-05, meaning that there is a significant difference between at least some of the means of the buds per stem per year. To further look into this, a dunns pairwise comparison test was done on the data. The dunns test showed a significant difference between the years 2016 and 2022, 2019 and 2022, 2020 and 2022, 2020 and 2024, implicating that these years had differing buds per stem per image per year. This can be seen in [Saguaro_stem_bud_analysis.ipynb](Saguaro_stem_bud_analysis.ipynb). 
+=======
+The reason that a significant difference was not seen between most of the years is likely due to the bias created from the blurry photos mentioned before. The amount of buds each year in these photos could not be correctly counted due to these photos. This is why it is important to also mark and count the number of stems each year so that the amount of buds can be controlled to the amount of stems in each image. 
+## Analyzing Stem Data With Bud Data
+To analyze the stem data, the stems excel spreadsheet was also put into a pandas dataframe where the data was graphed by year. 
+
+<p align="center">
+    
+</p>
+>>>>>>> 18c7dc9 (change readme)
 ## Machine Learning
 In progress as of 06/26/26
